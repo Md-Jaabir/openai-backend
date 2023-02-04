@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 require('dotenv').config();
-cors({ origin: "*" });
+app.use(cors({ origin: "*" }));
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 const configuration = new Configuration({
